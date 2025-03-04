@@ -1,2 +1,3 @@
 # pandora-starter-pack
-starter code to open a black box and extract some information
+
+Lien vers le wiki : https://github.com/Estia-advanced-programming/pandora-public/wiki
