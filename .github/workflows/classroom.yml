@@ -1,12 +1,11 @@
 name: Autograding Tests
 on:
-  - push
   - workflow_dispatch
   - repository_dispatch
 permissions:
   checks: write
   actions: read
-  contents: read
+  contents: write
 jobs:
   maven_build:
     name: Automatic Milestone Evaluation
@@ -32,7 +31,6 @@ jobs:
         run: |
           wget ${{ secrets.TEST_SUITE_URL }}/autograder.zip -O autograder.zip
           unzip -P ${{ secrets.AUTOGRADER_PASSWORD }} autograder.zip -d autograder
-
       - name: Set up nodejs to run the tests
         uses: actions/setup-node@v4
 
